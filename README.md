@@ -35,12 +35,12 @@ export EXA_API_KEY="your_exa_api_key"
 ### Running Vibeplexity
 
 ```bash
-# Start the interactive CLI
+# Start the interactive CLI (recommended)
 bun run cli
 
 # Alternative ways to run
-bun run dev
-bun run index.ts
+bun run dev        # Same as cli
+bun run index.ts   # Direct execution
 ```
 
 ## 🎯 How It Works
