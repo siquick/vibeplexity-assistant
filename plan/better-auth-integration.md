@@ -4,7 +4,7 @@
 
 [Better Auth](https://www.better-auth.com/docs/basic-usage) is a **perfect match** for our multi-service connection hub, providing enterprise-grade authentication with native support for [Hono](https://www.better-auth.com/docs/integrations/hono), [Google](https://www.better-auth.com/docs/authentication/google), [Spotify](https://www.better-auth.com/docs/authentication/spotify), and [Drizzle ORM](https://www.better-auth.com/docs/adapters/drizzle).
 
-## ✅ **Why Better Auth is Perfect for Vibeplexity**
+## ✅ **Why Better Auth is Perfect for Orin**
 
 ### **1. Exact Technology Stack Match**
 - ✅ **[Hono Integration](https://www.better-auth.com/docs/integrations/hono)**: Native support for our chosen web framework
@@ -384,4 +384,4 @@ Using Better Auth transforms our architecture from **authentication-heavy** to *
 - **Future-proof** with easy addition of new OAuth providers
 - **Production-ready** with minimal configuration
 
-This integration makes Vibeplexity's connection hub not just feasible, but **highly efficient to implement** while maintaining enterprise-grade security and user experience!
+This integration makes Orin's connection hub not just feasible, but **highly efficient to implement** while maintaining enterprise-grade security and user experience!

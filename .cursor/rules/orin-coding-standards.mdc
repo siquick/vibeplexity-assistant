@@ -1,0 +1,43 @@
+---
+description: Core coding standards for Orin
+globs: ["**/*.ts", "**/*.js", "**/*.tsx", "**/*.jsx"]
+alwaysApply: false
+---
+
+# Orin - Core Coding Standards
+
+## Runtime & Package Management
+- Use **Bun** as package manager and runtime
+- Always use `bun install` and `bun run` commands
+- Prefer ESM imports/exports over CommonJS
+
+## Code Style
+- Use **UK English spelling** (colour, initialise, organised, etc.)
+- Prefer **functional programming patterns** unless classes provide clear benefits
+- Write **smaller functions and files** over large classes with many methods
+- Focus on **readability and maintainability** over cleverness
+
+## TypeScript Standards
+- All functions should have **proper types** and **try/catch blocks**
+- Use strict typing - avoid `any` except when absolutely necessary
+- Export types alongside implementations
+
+## Example Function Structure:
+```typescript
+export async function processUserData(userId: string): Promise<UserData | null> {
+  try {
+    const userData = await fetchUserData(userId);
+    return transformUserData(userData);
+  } catch (error) {
+    console.error(`Failed to process user data for ${userId}:`, error);
+    throw new ProcessingError('User data processing failed', { userId, error });
+  }
+}
+```
+
+## Error Handling
+- Always wrap async operations in try/catch
+- Use descriptive error messages with context
+- Create custom error types for domain-specific failures
+
+Reference: @src/utils/functional.ts for functional programming examples

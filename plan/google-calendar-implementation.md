@@ -2,7 +2,7 @@
 
 ## 📋 Executive Summary
 
-Building a unified connection hub for Vibeplexity will enable users to:
+Building a unified connection hub for Orin will enable users to:
 - **Calendar Management**: "What's coming up this week?", "Schedule meeting Friday 2pm"
 - **Music Control**: "Play my Focus playlist", "What's currently playing?"
 - **Multi-Service Queries**: "What's on my calendar and play some background music"
@@ -31,7 +31,7 @@ This requires a **unified OAuth2 system**, **service abstraction layer**, **modu
 
 ### Current State Analysis
 ```
-Current Vibeplexity Architecture:
+Current Orin Architecture:
 ├── CLI Interface (index.ts)
 ├── Agentic Workflow (3-step planning)
 ├── Tools (web-search, fetch-url, generate-haiku)
@@ -49,7 +49,7 @@ Missing for Connection Hub:
 
 ### Proposed Architecture
 ```
-Enhanced Vibeplexity with Connection Hub:
+Enhanced Orin with Connection Hub:
 ├── CLI Interface (enhanced with multi-service auth)
 ├── Web Server (OAuth callbacks, service endpoints)
 ├── Connection Hub Core

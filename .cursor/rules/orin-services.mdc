@@ -1,0 +1,60 @@
+---
+description: Service architecture patterns for Orin's connection hub
+globs: ["**/services/**", "**/connections/**", "**/auth/**"]
+alwaysApply: false
+---
+
+# Orin - Service Architecture Standards
+
+## Service Naming & Structure
+- Always use **snake_case** for service names (e.g., `google_calendar_service`, `spotify_service`)
+- Follow our **internal RPC pattern** when defining services
+- Implement the service abstraction layer consistently
+
+## Service Template
+All services should extend the base service pattern:
+
+```typescript
+export class GoogleCalendarService extends BaseService {
+  constructor(connectionManager: ConnectionManager) {
+    super('google_calendar', connectionManager);
+  }
+
+  getCapabilities(): ServiceCapability[] {
+    return ['calendar.read', 'calendar.write', 'calendar.query'];
+  }
+
+  generateTools(): Tool[] {
+    return [
+      this.createCalendarQueryTool(),
+      this.createCalendarCreateTool(),
+      this.createCalendarManageTool()
+    ];
+  }
+
+  async handleQuery(userId: string, query: string): Promise<ServiceResult> {
+    try {
+      // Service-specific implementation
+      const tokens = await this.connectionManager.getValidTokens(userId, this.serviceId);
+      return await this.processQuery(query, tokens);
+    } catch (error) {
+      return this.handleServiceError(error, { userId, query });
+    }
+  }
+}
+```
+
+## Authentication & Connection Management
+- Use **Better Auth** for all OAuth2 flows
+- Store tokens encrypted using Better Auth's built-in encryption
+- Always check token validity before API calls
+- Implement proper token refresh logic
+
+## Connection Hub Principles
+- Services should be **pluggable** and **self-contained**
+- Support **dynamic tool generation** based on service capabilities
+- Enable **cross-service queries** through the orchestrator
+
+Reference: @src/services/base-service.ts
+Auth setup: @src/auth/auth.ts
+Connection management: @src/connections/connection-manager.ts

@@ -377,4 +377,4 @@ VALUES
 - Service-specific customizations possible
 - Backward compatibility maintained
 
-This example demonstrates how the connection hub transforms Vibeplexity from a single-purpose tool into a comprehensive personal assistant that can orchestrate multiple services seamlessly!
+This example demonstrates how the connection hub transforms Orin from a single-purpose tool into a comprehensive personal assistant that can orchestrate multiple services seamlessly!

@@ -1,0 +1,55 @@
+---
+description: Planning and documentation standards for Orin
+globs: ["**/plan/**", "**/docs/**", "**/*.md"]
+alwaysApply: false
+---
+
+# Orin - Planning & Documentation Standards
+
+## Project Planning
+- The **`/plan` folder is the source of truth** for all project planning
+- All planning documents should be in `/plan` folder
+- Use naming convention: `{feature-name}.md` for planning documents
+
+## Orin Brand Guidelines
+- Always refer to the project as **"Orin"** (not Vibeplexity)
+- Use Orin's symbolic meaning in documentation:
+  - **Light**: Clarity, guidance, illumination of digital complexity
+  - **Pine Tree**: Strength, reliability, natural growth and adaptation
+- Brand promise: *"Orin illuminates your digital life, transforming chaos into orchestrated harmony"*
+
+## Document Structure
+Planning documents should follow this hierarchy:
+1. **vision-document.md** - Strategic foundation and business vision
+2. **technical-architecture.md** - System design and implementation details
+3. **implementation-roadmap.md** - Timeline and development schedule
+4. **{service}-integration.md** - Service-specific integration plans
+
+## Documentation Style
+- Use **UK English spelling** throughout
+- Include concrete examples and code snippets
+- Provide clear success metrics and acceptance criteria
+- Reference actual files using `@filename` syntax when helpful
+
+## Planning Document Template:
+```markdown
+# {Feature Name} - Implementation Plan
+
+## 🎯 Overview
+Brief description of what we're building and why
+
+## 🏗️ Technical Requirements
+Specific technical needs and constraints
+
+## 📊 Implementation Plan
+Step-by-step breakdown with timelines
+
+## 🧪 Success Criteria
+Measurable outcomes and acceptance criteria
+
+## 📝 Next Steps
+Immediate actions required
+```
+
+Reference master plan: @plan/vision-document.md
+Technical specs: @plan/technical-architecture.md

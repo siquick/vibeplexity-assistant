@@ -6,7 +6,7 @@
 
 ```mermaid
 graph TB
-    subgraph "Current Vibeplexity"
+    subgraph "Current Orin"
         CLI[CLI Interface]
         Workflow[Agentic Workflow]
         Tools[Tools: web-search, fetch-url, haiku]
@@ -472,7 +472,7 @@ GOOGLE_CLIENT_SECRET=your_client_secret
 GOOGLE_REDIRECT_URI=https://api.vibeplexity.com/auth/google/callback
 
 # Database
-DATABASE_URL=postgresql://user:pass@localhost:5432/vibeplexity
+DATABASE_URL=postgresql://user:pass@localhost:5432/orin
 REDIS_URL=redis://localhost:6379
 
 # Security
@@ -481,7 +481,7 @@ ENCRYPTION_KEY=your_encryption_key
 SESSION_SECRET=your_session_secret
 
 # CORS
-CORS_ORIGIN=https://vibeplexity.com,https://app.vibeplexity.com
+CORS_ORIGIN=https://orin.ai,https://app.orin.ai
 
 # Rate Limiting
 RATE_LIMIT_REQUESTS_PER_MINUTE=30

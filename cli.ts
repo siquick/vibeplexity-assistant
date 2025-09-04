@@ -182,7 +182,7 @@ Provide your final response:`;
 function displayWelcome() {
   console.clear();
   console.log("🤖 " + "=".repeat(58));
-  console.log("🤖  VIBEPLEXITY - Agentic AI Assistant");
+  console.log("🤖  Orin - Agentic AI Assistant");
   console.log("🤖 " + "=".repeat(58));
   console.log("🌟 Ask me anything! I can:");
   console.log("   🔍 Search the web for latest information");
@@ -246,7 +246,7 @@ async function runCLI() {
 
   // Handle Ctrl+C gracefully
   rl.on("SIGINT", () => {
-    console.log("\n\n👋 Thank you for using Vibeplexity! Goodbye!");
+    console.log("\n\n👋 Thank you for using Orin! Goodbye!");
     rl.close();
     process.exit(0);
   });
@@ -259,7 +259,7 @@ async function runCLI() {
     const shouldContinue = await processQuery(input);
 
     if (!shouldContinue) {
-      console.log("👋 Thank you for using Vibeplexity! Goodbye!");
+      console.log("👋 Thank you for using Orin! Goodbye!");
       rl.close();
       process.exit(0);
     }
